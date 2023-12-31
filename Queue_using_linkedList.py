@@ -11,7 +11,7 @@ class Queue:
         self.tail = None
         self.length = 0
 
-    def append(self, value):
+    def enque(self, value):
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -30,7 +30,7 @@ class Queue:
         else:
             return "QUEUE IS EMPTY"
 
-    def pop(self):
+    def deque(self):
         name = self.head.value
         temp = self.head
         nextele = temp.next
@@ -52,12 +52,12 @@ class Queue:
         return res
     
 obj = Queue()
-obj.append(12)
-obj.append(13)
-obj.append(14)
+obj.enque(12)
+obj.enque(13)
+obj.enque(14)
 print(obj)
-print(obj.pop())
-obj.append(15)
+print(deque.pop())
+obj.enque(15)
 print(obj)        
 
         
