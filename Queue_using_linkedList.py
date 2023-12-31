@@ -56,7 +56,7 @@ obj.enque(12)
 obj.enque(13)
 obj.enque(14)
 print(obj)
-print(deque.pop())
+print(obj.deque())
 obj.enque(15)
 print(obj)        
 
