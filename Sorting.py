@@ -23,6 +23,7 @@ class Sorting:
                     self.array[j+1] = self.array[j]
                     self.array[j] = temp
         return self.array
+        
     
     def reverse(self, array):
         li = []
@@ -35,11 +36,11 @@ class Sorting:
             i -=1
         return li
     
+       
 
 array = [12, 34, 56, 89,2000, 0, 11, 11]
 object = Sorting()
-p = object.SelectionSort(array)
-print(object.reverse(array))
-print(object)
+print(object.removeDuplicates(array))
+
 
 
