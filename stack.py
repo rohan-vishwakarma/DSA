@@ -5,7 +5,6 @@ class Stack:
 		self.length = 0
 		self.stack = []
 
-
 	def isFull(self):
 		if len(self.stack) == self.stackSize:
 			return True
@@ -21,6 +20,11 @@ class Stack:
 			stack_list.append(value)
 			self.length +=1
 
+	def peek(self):
+		lastEle = self.stack[-1]
+		return lastEle
+	
+
 	def __str__(self):
 		list = self.stack.reverse()
 
@@ -33,5 +37,10 @@ class Stack:
 		
 		
 
-obj = Stack(5)
+obj = Stack(10)
+obj.push(1)
+obj.push(2)
+obj.push(3)
+obj.push(4)
+obj.push(5)
 print(obj)
