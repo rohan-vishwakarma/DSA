@@ -25,6 +25,8 @@ class User(Instagram):
     message = {}
     error_id = 0
 
+    srno = 1
+
     Instagram.userList
 
     def __init__(self, user):
@@ -43,9 +45,13 @@ class User(Instagram):
 
                 
     def follow(self, username):
-        if self.username not in self.following.keys() and self.username in self.userList:
-            self.following[f"{username}"]
-            User.__init__(self.followers[f"{self.user}"])
+        
+        if username not in self.following.keys() and username in self.userList:
+            self.following["usernames"] = {}
+            self.following["usernames"][f"{self.srno}"] = f"{username}"
+            self.srno +=1
+          
+            
 
     def __str__(self):
         if bool(self.message) == True:
@@ -53,20 +59,27 @@ class User(Instagram):
         else:
             temp = Instagram.list_of_users
             temp.remove(self.user)
-            return f"Followers: {self.followers}, Following: {self.following}, Instagram Users {temp}"
+            return f"My Username: {self.user} Followers: {self.followers}, Following: {self.following}, Instagram Users {temp}"
 
-obj2 = Instagram()
-obj2.signup("rohan")
+obj1 = Instagram()
+obj1.signup("rohan")
 
 obj2 = Instagram()
 obj2.signup("kavya")
 
-obj2 = Instagram()
-obj2.signup("Raj")
 
-obj = User("rohan")
-obj.follow("Raj")
-print(obj)
+obj4 = Instagram()
+obj4.signup("Rajvee")
+
+obj3 = User("rohan")
+obj3.follow("kavya")
+obj3.follow("Rajvee")
+
+
+
+
+
+print(obj3)
 
 
 
