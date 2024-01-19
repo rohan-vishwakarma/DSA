@@ -10,3 +10,5 @@ class Color(Enum):
 
 for elements in Color:
     print(elements.name, " = > ", elements.value)
+
+
