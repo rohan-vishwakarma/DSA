@@ -27,6 +27,8 @@ class User(Instagram):
 
     srno = 1
 
+    user_following = {}
+
     Instagram.userList
 
     def __init__(self, user):
@@ -47,8 +49,11 @@ class User(Instagram):
     def follow(self, username):
         
         if username not in self.following.keys() and username in self.userList:
-            self.following["usernames"] = {}
-            self.following["usernames"][f"{self.srno}"] = f"{username}"
+            print(self.user_following)
+            self.user_following["usernames"] = {}
+            self.user_following["usernames"][self.srno] = f"{username}"
+            print(self.srno)
+            print(self.user_following)
             self.srno +=1
           
             
@@ -59,7 +64,7 @@ class User(Instagram):
         else:
             temp = Instagram.list_of_users
             temp.remove(self.user)
-            return f"My Username: {self.user} Followers: {self.followers}, Following: {self.following}, Instagram Users {temp}"
+            return f"My Username: {self.user} Followers: {self.user_following}, Following: {self.following}, Instagram Users {temp}"
 
 obj1 = Instagram()
 obj1.signup("rohan")
@@ -75,21 +80,9 @@ obj3 = User("rohan")
 obj3.follow("kavya")
 obj3.follow("Rajvee")
 
-
-
-
-
 print(obj3)
 
 
-
-
-    
-
-    
-
-
-    
 # obj = Instagram()
 # obj.signup("Rohan")
 
