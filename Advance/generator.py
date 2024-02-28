@@ -1,18 +1,11 @@
-import numpy as np
 class Person:
-
-
     def __init__(self):
-        self.name = np.array('i', [])
-
+        self.name = []
     @staticmethod
     def add(list):
         print(list)
-    add("Roja")
+
 
 p = Person()
 print(p)
 
-
-
-    
