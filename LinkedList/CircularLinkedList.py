@@ -37,13 +37,13 @@ class CircularLinkedList:
         brk = False
         for _ in range(self.length):
             res += str(temp.data)
-            temp = temp.next
             if temp.next is not self.head:
                 res += '->'
+            temp = temp.next
         return  res
 
 Cll = CircularLinkedList()
 Cll.add(12)
 Cll.add(14)
 Cll.add(15)
-print(Cll.head.next.data)
+Cll.add(17)
