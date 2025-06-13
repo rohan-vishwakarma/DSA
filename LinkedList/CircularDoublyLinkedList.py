@@ -53,15 +53,14 @@ class CircularDoublyLinkedList:
             pointer = pointer.next
         return
 
-cdll = CircularDoublyLinkedList()
-cdll.add(12)
-cdll.add(13)
-cdll.add(14)
-cdll.add(15)
-cdll.add(16)
-print("Before => ",cdll)
-print(cdll.addatposition(2,100))
-print("After  => ", cdll)
-
-
-print(cdll.head.data)
+if __name__ == '__main__':
+    cdll = CircularDoublyLinkedList()
+    cdll.add(12)
+    cdll.add(13)
+    cdll.add(14)
+    cdll.add(15)
+    cdll.add(16)
+    print("Before => ",cdll)
+    print(cdll.addatposition(2,100))
+    print("After  => ", cdll)
+    print(cdll.head.data)

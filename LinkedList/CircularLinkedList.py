@@ -28,7 +28,6 @@ class CircularLinkedList:
             newNode.next = self.head
             newNode.prev = self.tail
             self.tail = newNode
-
         self.length += 1
 
     def __str__(self):
@@ -38,7 +37,7 @@ class CircularLinkedList:
         for _ in range(self.length):
             res += str(temp.data)
             if temp.next is not self.head:
-                res += '->'
+                res += ' -> '
             temp = temp.next
         return  res
 
@@ -47,3 +46,5 @@ Cll.add(12)
 Cll.add(14)
 Cll.add(15)
 Cll.add(17)
+
+print(Cll)
