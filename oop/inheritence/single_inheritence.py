@@ -19,4 +19,10 @@ car = Car("maruti suzuki", "420 horse power")
 carname = car.getCarName()
 engine  = car.getName()
 
-print(f"car name is {carname} and engine name is {engine}")
+
+a = lambda x: x * x
+
+print(a(12))
+
+
+print(range(1))
