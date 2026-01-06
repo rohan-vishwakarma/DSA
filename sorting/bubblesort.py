@@ -1,45 +1,21 @@
-from collections.abc import Iterable
+from typing import List
 
-from lists_p import smallest
+def bubble_sort(list_of_elements: List) -> List:
+    if not isinstance(list_of_elements, List):
+        raise ValueError("invalid type")
 
-array = [12, 3,20,2,1,0,54]
+    if len(list_of_elements) == 0 or len(list_of_elements) == 1:
+        return list_of_elements
 
+    for i in range(0, len(list_of_elements) - 1):
+        for j in range(0, len(list_of_elements) -i - 1):
+            if list_of_elements[j] > list_of_elements[j + 1]:
+                temp = list_of_elements[j + 1]
+                list_of_elements[j + 1] = list_of_elements[j]
+                list_of_elements[j] = temp
 
-def bubblesort(lst):
-    if len(lst) == 0:
-        return "iterables must not be empty"
+    return list_of_elements
 
-    if not isinstance(lst, Iterable):
-        return "function only accepts iterables"
-
-    for i in range(0, len(lst) - 1):
-        for j in range(len(lst) - 1 - i):
-            if lst[j] > lst[j + 1]:
-                temp = lst[j + 1]
-                lst[j + 1] = lst[j]
-                lst[j] = temp
-
-    return lst
-
-
-
-arr1= [1, 2, 3, 4, 5]
-arr2= [3, 4, 5, 6, 7]
-
-def common_elements(l1, l2):
-    large = l1
-    small = l2
-    common = []
-    if len(l2) > len(l1):
-        large = l2
-        small = l1
-    for i in range(0,len(large)):
-        if large[i] in small:
-            common.append(large[i])
-    return common
-
-c = common_elements(arr2, arr1)
-print(c)
-
-
-
+l = [1, 2, 7, 44, 3, 22, 6, 0]
+bs = bubble_sort(l)
+print(bs)

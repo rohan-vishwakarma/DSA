@@ -24,6 +24,7 @@ class LinkedList:
 			self.tail = newNode
 		self.length +=1
 
+
 	def prepend(self, value):
 		new_node = Node(value)
 		if self.head is not None:
@@ -57,10 +58,15 @@ class LinkedList:
 				res += '-->'
 		return res
 
-obj = LinkedList()
-element = obj.addElement(12)
-element = obj.addElement(13)
-element = obj.addElement(14)
-element = obj.addElement(15)
-element = obj.addAtPosition(3, 100)
-print(obj)
+	def __len__(self):
+		return self.length
+
+ll = LinkedList()
+ll.addElement(12)
+ll.addElement(13)
+ll.addElement(14)
+ll.addElement(15)
+ll.addAtPosition(3, 100)
+print(ll)
+
+print(len(ll))

@@ -23,7 +23,7 @@ class Child(Father):
         return f"Child name is {self.__name} \nFather name is {self.get_f_name()} \nGrandfather name is {self.get_gf_name()}"
 
 
-child = Child("rohan", "vishambhar", "phoolchand")
+child = Child("rohan", "joseph", "john")
 
 print(child)
 

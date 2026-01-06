@@ -1,36 +1,14 @@
-# just for practice
-
-dict = {
-
-    "name" : "rohan",
-    "Age" : " 19 Yo",
-    "place" : "Thane"
+dictionary = {
+    "name" :"rohan",
+    "age": 21,
+    "city": "mumbai",
+    "point" : 18
 }
-dict["name"] = "Kayva"
-dict["pincode"] = 400605
-dict["Address"] = list
-dict['Address'][list] 
 
-# removes the last key value from dictionary 
-dict.popitem()
+dictionary.update({"name": "rohan v"})
+dictionary.pop("name")
 
 
-for i in dict:
-    i, ' = > ' ,dict[i]
-
-for j in dict.values():
-    j
-
-for k in dict.keys():
-    k
-
-
-dict.setdefault("name")
-
-print(dict)
-
- 
-
-
-
+for key, value in dictionary.items():
+    print(f"key is {key} and value is {value}")
 
